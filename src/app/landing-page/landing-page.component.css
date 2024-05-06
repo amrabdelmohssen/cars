@@ -1,0 +1,30 @@
+.container-fluid {
+    background-image: url('../../assets/imges/landing-page/Frame.png');
+    background-position-x: right;
+    background-size: 40%;
+    background-repeat: no-repeat;
+}
+
+.sec-1  img {
+    max-width: 60%;
+}
+
+.sec-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sec-1 > article {
+    max-width: 16vw;
+    margin-left: 10vw;
+}
+
+.sec-1 > article > h1 {
+    font-weight: bold;
+}
+
+.sec-1 > article > h1 > span {
+    color:  #1572D3;
+    ;
+}
