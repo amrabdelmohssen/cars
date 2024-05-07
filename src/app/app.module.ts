@@ -7,6 +7,8 @@ import { CarDetailsComponent } from './car-details/car-details.component';
 import { CarsComponent } from './cars/cars.component';
 import { LandingPage } from './landing-page/landing-page.component';
 import { NavComponent } from './nav/nav.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CarCardComponent } from './car-card/car-card.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,14 @@ import { NavComponent } from './nav/nav.component';
     CarDetailsComponent,
     CarsComponent,
     LandingPage,
-    NavComponent
+    NavComponent,
+    CarCardComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
