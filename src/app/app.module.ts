@@ -9,6 +9,10 @@ import { LandingPage } from './landing-page/landing-page.component';
 import { NavComponent } from './nav/nav.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CarCardComponent } from './car-card/car-card.component';
+import { FooterComponent } from './footer/footer.component';
+import { AllVehiclesComponent } from './all-vehicles/all-vehicles.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,13 +21,17 @@ import { CarCardComponent } from './car-card/car-card.component';
     CarsComponent,
     LandingPage,
     NavComponent,
-    CarCardComponent
+    CarCardComponent,
+    FooterComponent,
+    AllVehiclesComponent,
+    PaginationComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

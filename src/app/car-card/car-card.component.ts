@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CarCard } from '../interfaces/car-card.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-car-card',
@@ -8,4 +9,8 @@ import { CarCard } from '../interfaces/car-card.interface';
 })
 export class CarCardComponent {
 @Input() carCard!:CarCard
+constructor(private router:Router){}
+navigateToCarDetails(id:number){
+ this.router.navigate([`home/all-vehicles/car/${id}`])
+}
 }
