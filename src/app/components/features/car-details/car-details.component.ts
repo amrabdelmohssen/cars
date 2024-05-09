@@ -39,13 +39,13 @@ export class CarDetailsComponent {
     };
     constructor(private activatedRout:ActivatedRoute , private carService:CarService , private router:Router) {
       activatedRout.paramMap.subscribe((params:any) => {
-        debugger
+        
        this.carId = params.params.id
       })
      }
   
     ngOnInit(): void {
-      debugger
+      
       this.carService.getCarById(this.carId).pipe(take(1),tap((res:CarCard)=> this.carDetails = res)).subscribe()
     }
   

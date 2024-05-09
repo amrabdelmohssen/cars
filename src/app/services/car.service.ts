@@ -20,7 +20,7 @@ export class CarService {
     return this.apiService.get(`cars`,options).pipe(
       map((res) =>
         res.map((item: CarCard, index: number) => {
-          debugger;
+          
           item = {
             ...item,
             review: 4.6,
@@ -48,7 +48,7 @@ export class CarService {
   getCarById(id: string): Observable<CarCard> {
     return this.apiService.get(`cars/${id}`).pipe(
       map((item) =>{
-        debugger
+        
         item = {
           ...item,
           review: 4.6,

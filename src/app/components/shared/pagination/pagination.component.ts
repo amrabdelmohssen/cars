@@ -17,7 +17,7 @@ export class PaginationComponent {
   allCars: CarCard[] = [];
   @Input() set items(value: CarCard[]) {
     if (value) {
-      debugger;
+      
       this.allCars = value;
       this.pagesCount = Math.round(value.length / this.itemsCountPerPage);
       for (let index = 0; index < this.pagesCount; index++) {
@@ -29,7 +29,7 @@ export class PaginationComponent {
   currentPage: number = 1;
 
   naviagteToAnotherPage(value: PaginationNavigationType | number): void {
-    debugger;
+    
     if (typeof value === 'number') {
       this.currentPage = value;
     } else if (value === PaginationNavigationType.next) {

@@ -47,7 +47,7 @@ cars:CarCard[] = [
       .pipe(
         take(1),
         tap((res) => {
-          debugger
+          
           this.cars = res;
         })
       )
