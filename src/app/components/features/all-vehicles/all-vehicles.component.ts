@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { CarCard, SystemType } from '../interfaces/car-card.interface';
-import { CarService } from '../services/car.service';
-import { pipe, take, tap } from 'rxjs';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { take, tap } from 'rxjs';
+import { CarCard, SystemType } from 'src/app/interfaces/car-card.interface';
+import { CarService } from 'src/app/services/car.service';
 
 @Component({
   selector: 'app-all-vehicles',
   templateUrl: './all-vehicles.component.html',
-  styleUrls: ['./all-vehicles.component.css'],
+  styleUrls: ['./all-vehicles.component.css']
 })
-export class AllVehiclesComponent implements OnInit {
+export class AllVehiclesComponent {
   carCard: CarCard = {
     id: 1,
     model: 'Audi R8',

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { CarCard } from '../interfaces/car-card.interface';
-import { PaginationNavigationType } from '../interfaces/pagination';
+import { CarCard } from '../../../interfaces/car-card.interface';
+import { PaginationNavigationType } from '../../../interfaces/pagination';
 
 @Component({
   selector: 'app-pagination',

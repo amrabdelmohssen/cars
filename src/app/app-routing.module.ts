@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AllVehiclesComponent } from './all-vehicles/all-vehicles.component';
-import { LandingPage } from './landing-page/landing-page.component';
-import { CarDetailsComponent } from './car-details/car-details.component';
+import { LandingPageComponent } from './components/features/landing-page/landing-page.component';
+import { AllVehiclesComponent } from './components/features/all-vehicles/all-vehicles.component';
+import { CarDetailsComponent } from './components/features/car-details/car-details.component';
+
 
 const routes: Routes = [
   {
@@ -15,7 +16,7 @@ const routes: Routes = [
   },
   {
     path : 'home',
-    component : LandingPage
+    component : LandingPageComponent
   },
 ];
 

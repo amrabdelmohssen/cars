@@ -1,20 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  faCoffee,
-  faLocationDot,
-  faLocationPin,
-} from '@fortawesome/free-solid-svg-icons';
-import { CarCard, SystemType } from '../interfaces/car-card.interface';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { take, tap } from 'rxjs';
+import { CarCard, SystemType } from 'src/app/interfaces/car-card.interface';
+import { CarService } from 'src/app/services/car.service';
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css'],
+  styleUrls: ['./landing-page.component.css']
 })
-export class LandingPage implements OnInit {
-  constructor(private router:Router) {}
-  carCard: CarCard = {
+export class LandingPageComponent {
+  constructor(private router:Router, private carService : CarService) {}
+ 
+cars:CarCard[] = [
+ {
     id: 1,
     model: 'Audi R8',
     review: 4.6,
@@ -39,10 +38,21 @@ export class LandingPage implements OnInit {
       'Lane Keeping Assist',
     ],
     owners: 1,
-  };
-
-  ngOnInit(): void {}
-
+  }
+]
+  ngOnInit(): void { this.getAllCars()}
+  getAllCars(): void {
+    this.carService
+      .getAllCars(4)
+      .pipe(
+        take(1),
+        tap((res) => {
+          debugger
+          this.cars = res;
+        })
+      )
+      .subscribe();
+  }
   navigateToAllVehiclesPage(){
     this.router.navigate(['home/all-vehicles'])
   }

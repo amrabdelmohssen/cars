@@ -8,8 +8,16 @@ import { CarCard, SystemType } from '../interfaces/car-card.interface';
 })
 export class CarService {
   constructor(private apiService: ApiService) {}
-  getAllCars(): Observable<CarCard[]> {
-    return this.apiService.get('cars').pipe(
+  getAllCars(limit?:number): Observable<CarCard[]> {
+    let options 
+    if(limit) {
+     options = {
+      params : {
+        limit 
+      }
+     }
+    }
+    return this.apiService.get(`cars`,options).pipe(
       map((res) =>
         res.map((item: CarCard, index: number) => {
           debugger;

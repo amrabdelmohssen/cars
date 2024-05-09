@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CarCard } from '../interfaces/car-card.interface';
+import { CarCard } from '../../../interfaces/car-card.interface';
 import { Router } from '@angular/router';
 
 @Component({

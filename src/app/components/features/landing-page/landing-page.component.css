@@ -1,6 +1,6 @@
 .container-fluid,
 .sec-5 {
-  background-image: url("../../assets/imges/landing-page/Frame.png");
+  background-image: url("../../../../assets/imges/landing-page/Frame.png");
   background-position-x: right;
   background-size: 40%;
   background-repeat: no-repeat;
@@ -66,7 +66,7 @@
 }
 
 .sec-5 {
-  background-image: url("../../assets/imges/landing-page/sec-5/Vector.png");
+  background-image: url("../../../../assets/imges/landing-page/sec-5/Vector.png");
   background-position-x: left;
   background-position-y: center;
   background-size: 55%;
@@ -80,7 +80,7 @@
 }
 
 .sec-6 {
-  background: #f7fbff url("../../assets/imges/landing-page/sec-6/“.png")
+  background: #f7fbff url("../../../../assets/imges/landing-page/sec-6/bg-sec6.png")
     no-repeat right top;
   background-size: 20%;
 }
