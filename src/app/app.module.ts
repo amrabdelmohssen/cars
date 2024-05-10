@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AllVehiclesComponent } from './components/features/all-vehicles/all-vehicles.component';
 import { CarDetailsComponent } from './components/features/car-details/car-details.component';
 import { LandingPageComponent } from './components/features/landing-page/landing-page.component';
+import { NotFoundComponent } from './features/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LandingPageComponent } from './components/features/landing-page/landing
     PaginationComponent,
     AllVehiclesComponent,
     CarDetailsComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    NotFoundComponent
 
   ],
   imports: [

@@ -3,9 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { LandingPageComponent } from './components/features/landing-page/landing-page.component';
 import { AllVehiclesComponent } from './components/features/all-vehicles/all-vehicles.component';
 import { CarDetailsComponent } from './components/features/car-details/car-details.component';
+import { NotFoundComponent } from './features/not-found/not-found.component';
 
 
 const routes: Routes = [
+
   {
     path : 'home/all-vehicles/car/:id',
     component : CarDetailsComponent
@@ -17,6 +19,15 @@ const routes: Routes = [
   {
     path : 'home',
     component : LandingPageComponent
+  },
+  {
+    path : '',
+    redirectTo : 'home', 
+    pathMatch : 'full',
+  },
+  {
+    path : '**',
+    component: NotFoundComponent
   },
 ];
 
